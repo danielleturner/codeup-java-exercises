@@ -6,6 +6,7 @@ public class ConsoleExercises {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
 //        boolean a = input.hasNextInt();
 //        if (a == true) System.out.println("True");
 //        else System.out.println("False");
@@ -55,21 +56,15 @@ public class ConsoleExercises {
          String myInput = input.nextLine();
 
          // Total square footage of room
-//        int footage = width  length;
-        Integer.parseInt(length);
-        System.out.println(length);
-        Integer.parseInt(width);
-        System.out.println(width);
+        int newLength = Integer.parseInt(length); // use Integer.parseInt to change the string to a number
+        int newWidth = Integer.parseInt(width);
+        int maxArea = newLength * newWidth;
 
 
-        System.out.print("The total square feet of your room is " + footage );
 
-//         Integer footage = input.nextInt();
+        System.out.print("The total square feet of your room is " + maxArea);
 
-//         if (footage > 0) {
-//             System.out.println("The total square footage of your room is " + );
-//
-//         }
+
 
 
 

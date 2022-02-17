@@ -165,6 +165,11 @@ public class SyntaxTypesVariables {
 //        System.out.println(pi);
 //        System.out.println(almostPi);
 
+        // int myNumb = 18;
+        // myNum + 2;
+
+
+
 
 
     }

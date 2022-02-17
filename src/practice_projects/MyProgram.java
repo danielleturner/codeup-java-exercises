@@ -1,3 +1,5 @@
+package practice_projects;
+
 import java.util.Scanner;
 
 public class MyProgram {

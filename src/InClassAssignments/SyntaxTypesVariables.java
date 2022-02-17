@@ -1,4 +1,4 @@
-/*-----Syntax, Types ona Variables---
+package InClassAssignments;/*-----Syntax, Types ona Variables---
 
 Two main categories of data types: primitive and reference
 primitive---- these data types are not objects. There only job is to store values of a specific type of [byte, short, int, long, float, double, char, boolean (see char in curriculum)]

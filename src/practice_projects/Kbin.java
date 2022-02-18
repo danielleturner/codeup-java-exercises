@@ -8,7 +8,7 @@ public class Kbin {
 
         char ch;
         System.out.print("Press a key followed by enter: ");
-        ch = (char) System.in.read();
+        ch = (char) System.in.read(); // THIS METHOD ALLOWS ME TO READ THE USERS KEY ENTRY ON THE KEYBOARD AND DISPLAY ON CONSOLE
         System.out.println("Your key is: " + ch);
     }
 }

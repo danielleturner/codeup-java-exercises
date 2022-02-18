@@ -73,64 +73,64 @@ public class ControlFlowExercises {
         // Number 3
 
 
-        Scanner scanner = new Scanner(System.in);
-
-
-
-        System.out.print("Please enter an integer between 1 and 5: ");
-        int userInput = scanner.nextInt();
-
-        int startValue = userInput;
-        System.out.println("You entered the number: " + startValue);
-        System.out.println("number |"  + " squared |" + " cubed" );
-        for(startValue = startValue; startValue <= 5; startValue++)
-
-        {
-            System.out.println(startValue +  "      "  + "|" + " " + startValue*startValue + "       " + "|" + " " + startValue*startValue*startValue);
-        }
+//        Scanner scanner = new Scanner(System.in);
+//
+//
+//
+//        System.out.print("Please enter an integer between 1 and 5: ");
+//        int userInput = scanner.nextInt();
+//
+//        int startValue = userInput;
+//        System.out.println("You entered the number: " + startValue);
+//        System.out.println("number |"  + " squared |" + " cubed" );
+//        for(startValue = startValue; startValue <= 5; startValue++)
+//
+//        {
+//            System.out.println(startValue +  "      "  + "|" + " " + startValue*startValue + "       " + "|" + " " + startValue*startValue*startValue);
+//        }
 
 
 
         // Numbrt 4.
 
-//        Scanner scanner = new Scanner(System.in);
-//
-//        double gradeA = 88;
-//        double gradeB = 80;
-//        double gradeC = 67;
-//        double gradeD = 60;
-//        double gradeF = 50;
-//
-//        System.out.print("Please enter a numerical grade from 1 to 100: ");
-//        double grade = scanner.nextDouble();
-//
-//        System.out.print("Do you want to know your letter grade: [y/N]");
-//        String userInput = scanner.next();
-////        System.out.println(userInput);
-//        if(userInput.equals("y"))
-//        {
-//            if(grade >= gradeA)
-//            {
-//                System.out.print("Good job skywalker you got an A. May the force be with you!" );
-//            }
-//            else if (grade >= gradeB)
-//            {
-//                System.out.print("Good job young patawan you got a B! Trained hard see I");
-//            }
-//            else if (grade >= gradeC)
-//            {
-//                System.out.print("Hmmm train harder do you. You got a C");
-//            }
-//            else if (grade >= gradeD)
-//            {
-//                System.out.print("Be careful young Anakin the the darkside may be upon you it may");
-//            }
-//            else if (grade <= gradeF)
-//            {
-//                System.out.print("You have turned to darkside luke, you shall be know as darthvader.....You shall not pass!");
-//            }
-//        }else {
-//            System.out.print("Hmmm, afraid are you young skywalker");
-//        }
+        Scanner scanner = new Scanner(System.in);
+
+        double gradeA = 88;
+        double gradeB = 80;
+        double gradeC = 67;
+        double gradeD = 60;
+        double gradeF = 50;
+
+        System.out.print("Please enter a numerical grade from 1 to 100: ");
+        double grade = scanner.nextDouble();
+
+        System.out.print("Do you want to know your letter grade: [y/N]");
+        String userInput = scanner.next();
+//        System.out.println(userInput);
+        if(userInput.equals("y"))
+        {
+            if(grade >= gradeA)
+            {
+                System.out.print("Good job skywalker you got an A. May the force be with you!" );
+            }
+            else if (grade >= gradeB)
+            {
+                System.out.print("Good job young patawan you got a B! Trained hard see I");
+            }
+            else if (grade >= gradeC)
+            {
+                System.out.print("Hmmm train harder do you. You got a C");
+            }
+            else if (grade >= gradeD)
+            {
+                System.out.print("Be careful young Anakin the the darkside may be upon you it may");
+            }
+            else if (grade <= gradeF)
+            {
+                System.out.print("You have turned to darkside luke, you shall be know as darthvader.....You shall not pass!");
+            }
+        }else {
+            System.out.print("Hmmm, afraid are you young skywalker");
+        }
     }
 }

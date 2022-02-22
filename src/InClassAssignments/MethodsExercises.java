@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-
+static final long randomNum = Math.round(Math.random()*100);
 
 
     public static void main(String[] args) {
@@ -15,13 +15,11 @@ public class MethodsExercises {
 //        System.out.println(divide(70, 10));
 //        System.out.println(modules(5,2));
 //        recmul(5);
-//        calculateNum();
-//        calculateNum();
-        System.out.println(getFactorial(5));
-        System.out.println("Factorials using recursive method.");
-        System.out.println(getIterativeFactorial(6));
-
-
+//        factorial(5);
+//        factorials(5);
+//        factorialTable(5);
+//        diceSide(5);
+        highLow();
     }
 
 
@@ -56,34 +54,79 @@ public class MethodsExercises {
         recmul(n * 2);
     }
 
-    public static void calculateNum(){
+
+
+    public static void factorials(int count){
 
         Scanner scanner = new Scanner(System.in);
+
+
+
         System.out.print("Enter an integer from 1 to 10: ");
-        int lum1 = scanner.nextInt();
-        System.out.println(lum1);
-        System.out.print("Do you want to talk about it? [y/N] ");
+        int userInput = scanner.nextInt();
+
+        System.out.print("Do you want to continue? [y/N] ");
         String input = scanner.next();
 
+        int fact = userInput * userInput;
 
         if(input.equalsIgnoreCase("y"))
-            System.out.println("standby");
+            System.out.printf("The factorial for !%s is: %s \n", userInput, fact);
 
     }
 
-    public static int getFactorial(int n){
-
-        if (n < 0) return -1;
-        else if (n < 2) return 1;
-        else return (n * getFactorial(n-1));
+    public static void factorialTable(int userInt){
+        long fact = 1;
+        for(int i = 1; i <= userInt; i++){
+            fact = fact * i;
+            System.out.printf("%d! = %d\n", i, fact);
+        }
     }
 
-    public static int getIterativeFactorial(int n){
-        if (n < 0) return -1;
-        int fact = 1;
-        for (n = 1; n <= 5; n++)
-            fact *=1;
-        return fact;
+    public static void diceSide(int sides){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of sides for a pair of dice?");
+        int input = scanner.nextInt();
+
+
+        long diceOne = Math.round(Math.random()* input);
+        System.out.printf("Dice 1 equals %s\n", diceOne);
+
+        long diceTwo = Math.round(Math.random()* input);
+        System.out.printf("Dice 2 equals %s\n", diceTwo);
+
+
+
+        System.out.print("Do you want to continue? [y/N] ");
+        String response = scanner.next();
+
+        if(response.equalsIgnoreCase("y")){
+            System.out.println("cool");
+        }else
+            System.out.println("Are you afraid...chicken");
+
     }
+
+    public static void highLow(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(randomNum);
+
+        System.out.print("Pick a number between 1 - 100: ");
+        double input = scanner.nextDouble();
+
+
+            if(input == randomNum){
+                System.out.print("Good Job grasshopeer");
+            }
+            else {
+                System.out.print("Sorry wrong number");
+                highLow();
+            }
+
+    }
+
 
 }

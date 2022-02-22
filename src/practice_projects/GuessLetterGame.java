@@ -1,10 +1,12 @@
 package practice_projects;
 
 import java.io.IOException; // built in java exception
+import java.util.Scanner;
 
 public class GuessLetterGame {
 
     public static void main(String[] args) throws IOException {
+
 
         char ch, answer = 'K';
 
@@ -17,4 +19,7 @@ public class GuessLetterGame {
         if(ch < answer) System.out.println(" too low");
         else System.out.print(" too high");
     }
+
+
+
 }

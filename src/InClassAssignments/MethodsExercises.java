@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-static final long randomNum = Math.round(Math.random()*100);
+static final long randomNum = Math.round(Math.random()*100); // random number generator
 
 
     public static void main(String[] args) {
@@ -83,7 +83,7 @@ static final long randomNum = Math.round(Math.random()*100);
         }
     }
 
-    public static void diceSide(int sides){
+    public static void diceSide(){
 
         Scanner scanner = new Scanner(System.in);
 
@@ -104,6 +104,7 @@ static final long randomNum = Math.round(Math.random()*100);
 
         if(response.equalsIgnoreCase("y")){
             System.out.println("cool");
+            diceSide();
         }else
             System.out.println("Are you afraid...chicken");
 
@@ -112,17 +113,19 @@ static final long randomNum = Math.round(Math.random()*100);
     public static void highLow(){
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println(randomNum);
+//        System.out.println(randomNum);
 
-        System.out.print("Pick a number between 1 - 100: ");
+        System.out.println("Guess a number between 1 - 100: ");
         double input = scanner.nextDouble();
 
 
             if(input == randomNum){
-                System.out.print("Good Job grasshopeer");
-            }
-            else {
-                System.out.print("Sorry wrong number");
+                System.out.print("GOOD GUESS GRASSHOPPER");
+            }else if(input < randomNum){
+                System.out.println("HIGHER");
+                highLow();
+            }else if(input > randomNum) {
+                System.out.println("LOWER");
                 highLow();
             }
 

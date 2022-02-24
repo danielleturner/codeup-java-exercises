@@ -15,14 +15,12 @@ public class util {
     }
 
     public static void main(String[] args) {
-        getString();
-        yesNo();
-        getInt();
-        getInt(3, 5);
-
-
-
-
+//        getString();
+//        yesNo();
+//        getInt();
+//        getInt(3, 5);
+//        getDouble(0,0);
+        getDouble();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -70,7 +68,7 @@ public class util {
         return numbers;
     }
 
-    public static int getInt(int min, int max){
+    public static void getInt(int min, int max){
 //        getInt(2, 5);
 
         Scanner scanner = new Scanner(System.in);
@@ -83,16 +81,71 @@ public class util {
 
         if (usernum < numBottom){
             System.out.println("Your number is to low");
+            System.out.println("Please pick another number");
             getInt(0, 0); // have user input another number
         }else if(usernum > numTop){
             System.out.println("Your number is too high");
+            System.out.println("Please pick another number");
             getInt(0, 0); // have uer input another number
-        }if(usernum <= numBottom || usernum >= numTop){
-            System.out.println("Good guess");
+        }else if(usernum <= numBottom || usernum >= numTop){
+            System.out.println();
+        }else{
+            System.out.println("Good job");
         }
-        return getInt(0,0);
+    }
+
+    public static double getDouble(double min, double max){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double numLow = 10.91;
+        double numHigh = 27.31;
 
 
+        System.out.println("Please enter a double digit number followed by a decimal point and two additional numbers: ");
+        double sumNum = scanner.nextDouble();
+
+        if (sumNum < numLow){
+            System.out.println("Your number is to low.");
+            System.out.println("Please pick another number:");
+            getDouble(0,0);
+        }else if(sumNum > numHigh){
+            System.out.println("Your number is to high.");
+            System.out.println("Please pick another number: ");
+            getDouble(0,0);
+        }else if(sumNum <= numLow || sumNum >= numHigh){
+            System.out.println();
+        }else{
+            System.out.println("Good Guess");
+        }
+        return sumNum;
+
+    }
+
+    public static double getDouble(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double low = 10;
+        double high = 50;
+
+        System.out.println("Please enter a double digit number: ");
+        double newNum = scanner.nextDouble();
+
+        if (newNum < low){
+            System.out.println("Your number is to low.");
+            System.out.println("Please pick another number:");
+            getDouble(0,0);
+        }else if(newNum > high){
+            System.out.println("Your number is to high.");
+            System.out.println("Please pick another number: ");
+            getDouble(0,0);
+        }else if(newNum <= low || newNum >= high){
+            System.out.println();
+        }else{
+            System.out.println("Good Guess Skywalker");
+        }
+        return newNum;
     }
 
 }

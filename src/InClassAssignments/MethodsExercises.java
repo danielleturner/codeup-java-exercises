@@ -17,7 +17,7 @@ static final long randomNum = Math.round(Math.random()*100); // random number ge
 //        recmul(5);
 //        factorial(5);
 //        factorials(5);
-//        factorialTable(5);
+        factorialTable(5);
 //        diceSide(5);
         highLow();
     }
@@ -127,7 +127,8 @@ static final long randomNum = Math.round(Math.random()*100); // random number ge
             }else if(input > randomNum) {
                 System.out.println("LOWER");
                 highLow();
-            }
+            }else
+                System.out.println();
 
     }
 

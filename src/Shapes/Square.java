@@ -1,4 +1,5 @@
 package Shapes;
+
 // subclass of rectangle
 public class Square extends Rectangle {
 

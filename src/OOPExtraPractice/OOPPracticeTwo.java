@@ -7,7 +7,6 @@ public class OOPPracticeTwo {
     protected String beans;
     protected String ham;
 
-    String[] Perishables = {rice, beans, ham};
 
     protected long price;
     protected long quantity;
@@ -17,16 +16,16 @@ public class OOPPracticeTwo {
     double riceprice = 4.25;
     double beanprice = 3.75;
     double hamprice = 7.75;
-    long tax1 = (long) 8.75;
+    double tax1 =  8.75;
 
 
     //--Constructor--//
-    public OOPPracticeTwo(String name, long quantity, long price, long total, long tax) {
+    public OOPPracticeTwo(String name, long quantity, long price, long total, long tax1) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.total = total;
-        this.tax = tax;
+        this.tax1 = tax1;
 
     }
 
@@ -37,10 +36,8 @@ public class OOPPracticeTwo {
     }
 
     public long getPrice(){
-        return this.quantity + this.price * this.tax;
-
+        return (long) (this.quantity * price + tax1);
     }
-
 
 
     public static void main(String[] args) {

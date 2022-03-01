@@ -13,7 +13,7 @@ public class Calculation extends OOPPracticeTwo {
     }
 
     public long getPrice(){
-        return this.quantity + this.price * this.tax;
+        return (this.price * this.quantity + this.tax);
 
     }
 

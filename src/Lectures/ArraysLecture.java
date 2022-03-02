@@ -38,9 +38,9 @@ public class ArraysLecture {
 
         // ARRAYS.sort(array name) <--- also can be used to sort numbers
         int[] random = {44,12,1,54,2};
-        System.out.println(Arrays.toString(random));
-        Arrays.sort(random);
-        System.out.println(Arrays.toString(random));
+//        System.out.println(Arrays.toString(random));
+//        Arrays.sort(random);
+//        System.out.println(Arrays.toString(random));
 
 
 
@@ -156,7 +156,29 @@ public class ArraysLecture {
 
         // TWO-DIMENSIONAL ARRAYS
 
+        int[] myArr = new int[3]; // <--- this is how to define a single array
+        int[][] myMatrix = {{4,7,9},
+                {1,5,9},
+                {2,2,7}
+        };
 
+        System.out.println(Arrays.deepToString(myMatrix)); // <-- to run this method need to use deep to string method
+        // print out every nested element in the matrix
+        // do a loop
+        // do another loop
+        // loop de loop
+
+        for(int[] rows: myMatrix){ // first do a for followed by () with type of array with a name you choose here it's rows followed by a semicolon then the name of the array.
+            System.out.println("-------this is a new row-------");
+            for(int column: rows){ // <-- here you refrenece the rows because it's what you named the int array initially
+            System.out.println(column);
+            }
+        }
+
+        int[][] newMatrix = new int[4][4];
+        newMatrix[0][0] = 8;
+        newMatrix[3][3] = 2; // <-- here this changes the number in the 3 array at the 3 index to 2
+        System.out.println(Arrays.deepToString(newMatrix));
     }
     }
 //}

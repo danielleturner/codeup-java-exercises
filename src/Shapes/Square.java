@@ -1,31 +1,18 @@
 package Shapes;
 
 // subclass of rectangle
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Measurable {
 
-    public double side;
-
-    public Square(double length, double width){
-        super(length, width);
-
-    }
 
     public Square(double side) {
-        super(side);
-        this.side = side;
+        super(side,side);
     }
 
-    public double getArea(){
-        return Math.pow(this.side,2);
+    public double getPerimeter() {
+        return super.getPerimeter();
     }
 
-    public double getPerimeter(){
-        return this.side * 4;
-    }
-
-
-
-    public static void main(String[] args) {
-
+    public double getArea() {
+        return super.getArea();
     }
 }

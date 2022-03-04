@@ -27,6 +27,9 @@ public class MovieApplication {
 
         int userInput = input.nextInt();
 //        System.out.println(userInput);
+        if(userInput == 0){
+            return;
+        }
         if(userInput == 1){
             System.out.println(Arrays.toString(movielist));
             for(Movie movie : movielist){
@@ -66,6 +69,7 @@ public class MovieApplication {
             System.out.println(moviename + " " + moviecategory);
 
             Movie movie = new Movie(moviename, moviecategory);
+
             Movie[] newMovieList = Arrays.copyOf(movielist, movielist.length + 1);
             newMovieList[newMovieList.length - 1] = movie;
             movielist = newMovieList;
@@ -82,9 +86,6 @@ public class MovieApplication {
     public static void main(String[] args) {
 
         MovieMenu();
-
-
-
 
     }
 }

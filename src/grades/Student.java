@@ -23,7 +23,7 @@ public class Student {
     }
 
     public void getGradeAverage() {
-        int i;
+//        int i;
         int sum = 0;
         for(int x : grades){ // enhanced for loop iterating over the three grades
             sum += x;

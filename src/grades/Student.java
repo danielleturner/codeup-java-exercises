@@ -72,13 +72,6 @@ public class Student {
         System.out.println("student4 = " + student4.name + student4.grades);
         student4.getGradeAverage();
         System.out.println();
-
-
-
-
     }
-
-
-
 
 }

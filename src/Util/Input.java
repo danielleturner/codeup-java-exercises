@@ -1,42 +1,40 @@
-package InClassAssignments;
+package Util;
 
 import java.util.Scanner;
 
-public class util {
+public class Input {
 
     Scanner scanner = new Scanner(System.in);
 
 
-
-    private class Input{
-
-        Scanner scanner = new Scanner(System.in);
-
-    }
-
-    public static void main(String[] args) {
-//        getString();
-//        yesNo();
-//        getInt();
-//        getInt(3, 5);
-//        getDouble(0,0);
-        getDouble();
+    public static String getString(){
 
         Scanner scanner = new Scanner(System.in);
 
-
-
-    }
-
-    public static void getString(){
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Hello nice to see you today. How are you doing? ");
         String userinput = scanner.nextLine();
-        System.out.println(userinput);
+        return scanner.nextLine();
 
     }
+
+    public int getInt(){
+
+//        Scanner scanner = new Scanner(System.in);
+
+//        System.out.println("enter two integers: ");
+//        int numbers = scanner.nextInt();
+        String numInt = getString();
+        return Integer.valueOf(numInt);
+
+        try{
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Nubmer can't be parsed");
+            System.out.println("please enter a number");
+            return getInt();
+        }
+
+    }
+
 
     public static boolean yesNo(){
 
@@ -57,16 +55,6 @@ public class util {
             return userInput;
     }
 
-
-    public static int getInt(){
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("enter two integers: ");
-        int numbers = scanner.nextInt();
-        System.out.println(numbers);
-        return numbers;
-    }
 
     public static void getInt(int min, int max){
 //        getInt(2, 5);
@@ -132,20 +120,43 @@ public class util {
         System.out.println("Please enter a double digit number: ");
         double newNum = scanner.nextDouble();
 
-        if (newNum < low){
-            System.out.println("Your number is to low.");
-            System.out.println("Please pick another number:");
-            getDouble(0,0);
-        }else if(newNum > high){
-            System.out.println("Your number is to high.");
-            System.out.println("Please pick another number: ");
-            getDouble(0,0);
-        }else if(newNum <= low || newNum >= high){
-            System.out.println();
-        }else{
-            System.out.println("Good Guess Skywalker");
+        try{
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e){
+            System.out.println("Given input cannot be parsed as an double");
+            e.printStackTrace();
+            return getDouble();
         }
-        return newNum;
+
+//        if (newNum < low){
+//            System.out.println("Your number is to low.");
+//            System.out.println("Please pick another number:");
+//            getDouble(0,0);
+//        }else if(newNum > high){
+//            System.out.println("Your number is to high.");
+//            System.out.println("Please pick another number: ");
+//            getDouble(0,0);
+//        }else if(newNum <= low || newNum >= high){
+//            System.out.println();
+//        }else{
+//            System.out.println("Good Guess Skywalker");
+//        }
+//        return newNum;
     }
+
+    public static void main(String[] args){
+//        getString();
+//        yesNo();
+//        getInt();
+//        getInt(3, 5);
+//        getDouble(0,0);
+        getDouble();
+
+        Scanner scanner = new Scanner(System.in);
+
+
+
+    }
+
 
 }

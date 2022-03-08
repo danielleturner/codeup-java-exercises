@@ -66,13 +66,13 @@ public class GradesApplication extends Student {
 
         ArrayList<String> githubusernames = new ArrayList<>();
 
-        githubusernames.add(0, "|" + "danielleturner" + "|");
-        githubusernames.add(1, "|" + "mthomas" + "|");
-        githubusernames.add(2, "|" + "dbees" + "|");
-        githubusernames.add(3, "|" + "speyton" + "|");
+        githubusernames.add("|danielleturner|");
+        githubusernames.add("|mthomas|");
+        githubusernames.add("|dbees|");
+        githubusernames.add("|speyton|");
 
 
-        String yes = "";
+        String ok = "";
 
 
         Scanner input = new Scanner(System.in);
@@ -86,20 +86,8 @@ public class GradesApplication extends Student {
             System.out.println("githubusernames = " + githubusernames);
             System.out.println("Please enter a github username: ");
         }else{
-            System.out.println("no");
+            System.out.println();
         }
-
-
-//        System.out.println("Here are the GitHub usernames of our students:\n" +
-//                "|danielleturner|  |dbees|  |speyton|  |mthomas|\n" +
-//                "What student would you like more information on?\n" +
-//                "danielleturner\n" +
-//                "dbees\n" +
-//                "speyton\n" +
-//                "mthomas\n" +
-//                "\n" +
-//                "Enter your choice: ");
-
 
 
         students.put("Danielle Turner",  "|" + "danielleturner"+"|");
@@ -143,22 +131,13 @@ public class GradesApplication extends Student {
         String no = "";
 
 
-
-
-//        System.out.println("students.get(\"githubuser_1\") = " + students.get("githubuser_1")); // <-- user from github how to pull
-//        System.out.println();
-//        System.out.println("students.get(\"Danielle Turner\") = " + students.get("Danielle Turner"));
-//        System.out.print("students.get(\"Danielle Turner\") = " + students.get("Danielle Turner")); //<--Make github usernames with this format
-//        System.out.print(students.get("Danielle Turner")+ "" );
-//        students.put(" mthomas |","Micheal Thomas");
-//        students.put(" |akamara|", "Alvin Kamara");
-//        int userInput = input.nextInt();
-
-
         String userInput = input.next();
+
+
 
         if(userInput.equalsIgnoreCase(danielleturner)){
             System.out.println("GitHub name is: " + githubusernames.get(0));
+            System.out.println("danielleTurnerGrades = " + danielleTurnerGrades);
             System.out.println("danielleTurnerGrades = " + danielleTurnerGrades);
             System.out.println("Would you like to see another student?");
         }else if(userInput.equalsIgnoreCase(dbees)){

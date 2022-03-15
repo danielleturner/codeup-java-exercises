@@ -25,13 +25,13 @@ public class Input {
         String numInt = getString();
         return Integer.valueOf(numInt);
 
-        try{
-            return Integer.parseInt(getString());
-        }catch (NumberFormatException e){
-            System.out.println("Nubmer can't be parsed");
-            System.out.println("please enter a number");
-            return getInt();
-        }
+//        try{
+//            return Integer.parseInt(getString());
+//        }catch (NumberFormatException e){
+//            System.out.println("Nubmer can't be parsed");
+//            System.out.println("please enter a number");
+//            return getInt();
+//        }
 
     }
 

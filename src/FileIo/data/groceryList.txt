@@ -1,0 +1,10 @@
+coffee
+catfood
+roastbeef
+carrots
+onions
+celery
+bread
+fish
+boudin
+crackers
